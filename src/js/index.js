@@ -7,7 +7,14 @@ import "../styles/index.css";
 
 //import your own components
 import Home from "./component/home.jsx";
+let counter = 0;
 
-//render your react application
-ReactDOM.createRoot(document.getElementById('app')).render(<Home/>);
+setInterval(() => {
+    counter++
+    console.log(counter)
+    //render your react application
+ReactDOM.createRoot(document.getElementById('app')).render(<Home counter = {counter} />);
+
+}, 1000);
+
 
